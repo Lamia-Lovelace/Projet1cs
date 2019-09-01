@@ -12,6 +12,7 @@ class Formulaire extends StatefulWidget {
 }
 
 class _MyAppState extends State<Formulaire>  with TickerProviderStateMixin{
+  
   PageController _controller;
   AnimationController animationController;
   Animation<double> _scaleAnim;
@@ -36,6 +37,8 @@ class _MyAppState extends State<Formulaire>  with TickerProviderStateMixin{
   }
 
   Widget build(BuildContext context) {
+    var width_=MediaQuery.of(context).size.width;
+    var height_=MediaQuery.of(context).size.height;
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar:  new AppBar(
@@ -273,8 +276,9 @@ class _MyAppState extends State<Formulaire>  with TickerProviderStateMixin{
                 },
               ),
               Positioned(
-                left: 60.0,
-                bottom: 100.0,
+                left: width_/10,
+                right: width_/10,
+                bottom: height_/9,
                 child: Container(
                   width: 250.0,
                   child: PageIndicator(currentPage, pagelist.length),

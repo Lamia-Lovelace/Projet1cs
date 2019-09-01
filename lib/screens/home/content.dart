@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projet_1cs/screens/home/volet.dart';
+import 'package:projet_1cs/screens/home/volet1.dart';
 import 'package:projet_1cs/screens/gps/appGPS.dart';
 import 'package:projet_1cs/screens/formulaire/formulaire.dart';
 import 'package:projet_1cs/screens/prediction/choisirDate.dart';
@@ -25,7 +26,7 @@ class Content extends StatelessWidget{
                       children: <Widget>[
                         Volet(new  Icon( Icons.add_location,  ),Color.fromRGBO(246, 142, 79, 0.1),Color.fromRGBO(246, 142, 79,0.8), "Qualité de l'air en temps réel\n", ()=>AppGPS()),
                         Volet(new  Icon( Icons.assessment,  ),Color.fromRGBO(49, 195, 182, 0.1), Color.fromRGBO(49, 195, 182, 0.8),"Prédiction sur la qualité de l'air", ()=>DatePick()),
-                        Volet(new  Icon( Icons.chrome_reader_mode,  ),Color.fromRGBO(42, 198, 220, 0.1),Color.fromRGBO(42, 198, 220, 0.8), "Articles informatifs\n", ()=>{}),
+                        Volet1(new  Icon( Icons.chrome_reader_mode,  ),Color.fromRGBO(42, 198, 220, 0.1),Color.fromRGBO(42, 198, 220, 0.8), "Articles informatifs\n"),
                         Volet(new  Icon( Icons.directions_car,  ),Color.fromRGBO(175, 183, 194, 0.1), Color.fromRGBO(175, 183, 194, 0.8),"Mon véhicule et la polution?\n", ()=>Formulaire()),
                       ],
                     )))),
